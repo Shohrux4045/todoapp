@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Todo,Category
+from .models import Todo
 
 class TaskAdmin(admin.ModelAdmin):
     list_display = ('title', 'description', 'completed', 'created')
@@ -12,4 +12,3 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ('title',)
 
 admin.site.register(Todo, TaskAdmin)
-admin.site.register(Category, CategoryAdmin)
