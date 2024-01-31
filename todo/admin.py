@@ -6,9 +6,6 @@ class TaskAdmin(admin.ModelAdmin):
     list_filter = ('completed', 'created')
     search_fields = ('title', 'description')
 
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title')
-    list_display_links = ('title',)
-    search_fields = ('title',)
+
 
 admin.site.register(Todo, TaskAdmin)
